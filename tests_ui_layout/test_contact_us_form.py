@@ -9,7 +9,7 @@ from pom.contact_us_page import ContactUsPage
 @pytest.mark.smoke
 @pytest.mark.regression
 def test_submit_form(playwright: Playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch()
     page = browser.new_page()
     contact_us = ContactUsPage(page)
     contact_us.navigate()
@@ -18,7 +18,7 @@ def test_submit_form(playwright: Playwright):
 
 # @pytest.mark.skip(reason="form is not ready")
 def test_submit_form2(playwright: Playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch()
     page = browser.new_page()
     contact_us = ContactUsPage(page)
     contact_us.navigate()
@@ -27,7 +27,7 @@ def test_submit_form2(playwright: Playwright):
 
 # @pytest.mark.regression
 def test_submit_form3(playwright: Playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch()
     page = browser.new_page()
     contact_us = ContactUsPage(page)
     contact_us.navigate()
