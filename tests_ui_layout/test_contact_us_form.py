@@ -3,12 +3,13 @@ import time
 import pytest
 from playwright.sync_api import Playwright, sync_playwright, expect
 
+from conftest import set_up
 from pom.contact_us_page import ContactUsPage
 
 # two or more markers could be added to the test
 @pytest.mark.smoke
 @pytest.mark.regression
-def test_submit_form(playwright: Playwright):
+def test_submit_form(playwright: set_up):
     browser = playwright.chromium.launch()
     page = browser.new_page()
     contact_us = ContactUsPage(page)
@@ -17,7 +18,7 @@ def test_submit_form(playwright: Playwright):
 
 
 # @pytest.mark.skip(reason="form is not ready")
-def test_submit_form2(playwright: Playwright):
+def test_submit_form2(playwright: set_up):
     browser = playwright.chromium.launch()
     page = browser.new_page()
     contact_us = ContactUsPage(page)
@@ -26,7 +27,7 @@ def test_submit_form2(playwright: Playwright):
 
 
 # @pytest.mark.regression
-def test_submit_form3(playwright: Playwright):
+def test_submit_form3(playwright: set_up):
     browser = playwright.chromium.launch()
     page = browser.new_page()
     contact_us = ContactUsPage(page)
