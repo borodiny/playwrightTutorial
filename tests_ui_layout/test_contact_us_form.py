@@ -16,7 +16,7 @@ def test_submit_form(playwright: Playwright):
     contact_us.submit_form("Yevhen", "11 street", "test@test.com", "1234567890", "subject", "message")
 
 
-@pytest.mark.skip(reason="form is not ready")
+# @pytest.mark.skip(reason="form is not ready")
 def test_submit_form2(playwright: Playwright):
     browser = playwright.chromium.launch(headless=False)
     page = browser.new_page()
@@ -25,7 +25,7 @@ def test_submit_form2(playwright: Playwright):
     contact_us.submit_form("Yevhen", "11 street", "test@test.com", "1234567890", "subject", "message")
 
 
-@pytest.mark.regression
+# @pytest.mark.regression
 def test_submit_form3(playwright: Playwright):
     browser = playwright.chromium.launch(headless=False)
     page = browser.new_page()
@@ -34,7 +34,7 @@ def test_submit_form3(playwright: Playwright):
     contact_us.submit_form("Yevhen", "11 street", "test@test.com", "1234567890", "subject", "message")
 
 
-@pytest.mark.xfail(reason="url is not ready")
+# @pytest.mark.xfail(reason="url is not ready")
 def test_run2(set_up) -> None:
     page = set_up
 

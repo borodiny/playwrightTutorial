@@ -4,9 +4,9 @@ import pytest
 from playwright.sync_api import Playwright, sync_playwright
 
 
-@pytest.mark.parametrize("email, password", [("test@test.com", "Test1234"),
-                                             pytest.param("fakeemail", "fakepass", marks=pytest.mark.xfail),
-                                             ("test@test", "Test1234")])
+# @pytest.mark.parametrize("email, password", [("test@test.com", "Test1234"),
+#                                              pytest.param("fakeemail", "fakepass", marks=pytest.mark.xfail),
+#                                              ("test@test", "Test1234")])
 def test_run(set_up, email, password) -> None:
     page = set_up
 
